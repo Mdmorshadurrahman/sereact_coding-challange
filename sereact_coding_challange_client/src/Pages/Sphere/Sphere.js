@@ -43,7 +43,7 @@ function Sphere() {
 
     // Geometry and material for the sphere
     let geometry = new THREE.SphereGeometry(radius, 32, 16);
-    const material = new THREE.MeshBasicMaterial({ color: 'lightblue' });
+    const material = new THREE.MeshBasicMaterial({ color: '#3611bb'});
     let sphere = new THREE.Mesh(geometry, material);
     scene.add(sphere);
 
@@ -85,11 +85,11 @@ function Sphere() {
             <input
               name="radiusValue"
               type="number"
-              placeholder="Type here"
+              placeholder="Type radius"
               className="text-black input input-bordered w-full max-w-xs"
             />
           </div>
-          <button className="text-white border-2 border-black py-1 px-3 font-semibold text-2xl">
+          <button className="text-white border-2 bg-blue-900 border-black py-1 px-3 font-semibold text-2xl">
             Set The Radius
           </button>
         </form>
