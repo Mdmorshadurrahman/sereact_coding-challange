@@ -7,7 +7,7 @@ const server = new JSONRPCServer();
 let currentValue = 0;
 let sphereRadius = 5;
 
-// Define JSON-RPC methods
+// JSON-RPC methods
 server.addMethod('increment', () => {
   currentValue += 1;
   return currentValue;
@@ -27,8 +27,8 @@ server.addMethod('set_radius', ({ radius }) => {
 
 server.addMethod('get_radius', () => sphereRadius);
 
-// Create WebSocket Server
-const wss = new WebSocket.Server({ port: 5001 }); // WebSocket on port 5001
+// WebSocket Server on port 5001
+const wss = new WebSocket.Server({ port: 5001 });
 
 wss.on('connection', (ws) => {
   console.log('Client connected via WebSocket');
